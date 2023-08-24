@@ -210,8 +210,8 @@ void printData() {
   int jpm = chunkAmount * (60000 / (NUM_LEDS * tick));
   int airtime = 100 * ((width * chunkAmount) / NUM_LEDS);
   Serial.println("Current Data:");
-  Serial.println("Tick Rate: " + tick + " Chunks: " + chunkAmount + " Width: " + width);
-  Serial.println("Jumps Per Min: " + jpm + " Airtime: " + airtime + "%");
+  Serial.println("Tick Rate: " + String(tick) + " Chunks: " + String(chunkAmount) + " Width: " + String(width));
+  Serial.println("Jumps Per Min: " + String(jpm) + " Airtime: " + String(airtime) + "%");
 }
 
 void nt1(int width, int start) {
@@ -259,4 +259,5 @@ void nt6(int width, int start) {
     leds[(start + (5 * NUM_LEDS / 6) + j) % NUM_LEDS] = CRGB::Red;
   }
 }
+
 
