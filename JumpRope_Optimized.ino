@@ -296,10 +296,10 @@ void generateHueArray (int startingHealth) {
     }
 
   }
-   for (int i = 0; i <= startingHealth; i++) {
-    Serial.print("hue[" + String(i) + "] = " + String(hue[i]) + ", ");
-  }
-  Serial.println();
+  // for (int i = 0; i <= startingHealth; i++) {
+  //  Serial.print("hue[" + String(i) + "] = " + String(hue[i]) + ", "); // shows the hue[] array in case I choose to debug in the future
+  //}
+  //Serial.println();
 }
 
 // methods below are only relevent if healthOn is true
@@ -321,8 +321,8 @@ void healthReduction(bool healthOn) {
 
 CRGB refHueUpdate(){
   //return CRGB( 95, 255 ,255);
-  Serial.println(hue[remainingHealth]);
-  Serial.println(remainingHealth);
+  //Serial.println(hue[remainingHealth]); // for periodic full health debugging
+  //Serial.println(remainingHealth);
   return CHSV(hue[remainingHealth], 255 ,255);
 }
 
